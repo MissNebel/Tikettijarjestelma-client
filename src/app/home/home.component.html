@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="titlerow">
+    <div class="mytitlerow">Tikettitaulu
+    <fa-icon class="infoicon" type="button" [icon]="faQuestion" placement="right" triggers="mouseenter:mouseleave"
+    ngbPopover="Avaa tiketti painamalla otsikkoa. Sulje tiketti painamalla otsikkoa uudestaan.
+    Poista tiketti painamalla roskakorin kuvaa.">
+  </fa-icon>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div id="accordiona">
+        <div class="mytitle">
+          Avoimet tiketit
+        </div>
+        <div class="card" *ngFor="let tiketti of Avoimet; let i = index">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <div class="btn btn-link mybtn" data-toggle="collapse" attr.data-target="#collapse{{tiketti.id}}" aria-expanded="false" attr.aria-controls="collapse{{tiketti.id}}">
+                {{ tiketti.nimi }}
+              </div>
+              <div class="nappulat"> 
+                <fa-icon class="myicon" type="button" [icon]="faEdit" (click)="navigate(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faTrash" (click)="poistaTiketti(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faRight" (click)="muutaTila(tiketti.id, 'aloitettu')"></fa-icon>
+              </div>
+            </h5>
+          </div>
+          <div id="collapse{{tiketti.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordiona">
+            <div class="card-body">
+              {{ tiketti.kuvaus }}
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm">
+      <div id="accordionb">
+        <div class="mytitle">
+          Aloitetut tiketit
+        </div>
+        <div class="card" *ngFor="let tiketti of Aloitetut; let i = index">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <div class="btn btn-link mybtn" data-toggle="collapse" attr.data-target="#collapse{{tiketti.id}}" aria-expanded="false" attr.aria-controls="collapse{{tiketti.id}}">
+                {{ tiketti.nimi }}
+              </div>
+              <div class="nappulat">
+                <fa-icon class="myicon" type="button" [icon]="faEdit" (click)="navigate(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faTrash" (click)="poistaTiketti(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faLeft" (click)="muutaTila(tiketti.id, 'avoin')"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faRight" (click)="muutaTila(tiketti.id, 'valmis')"></fa-icon>
+              </div>
+            </h5>
+          </div>
+          <div id="collapse{{tiketti.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionb">
+            <div class="card-body">
+              {{ tiketti.kuvaus }}
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm">
+      <div id="accordionc">
+        <div class="mytitle">
+          Valmiit tiketit
+        </div>
+        <div class="card" *ngFor="let tiketti of Valmiit; let i = index">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <div class="btn btn-link mybtn" data-toggle="collapse" attr.data-target="#collapse{{tiketti.id}}" aria-expanded="false" attr.aria-controls="collapse{{tiketti.id}}">
+                {{ tiketti.nimi }}
+              </div>
+              <div class="nappulat">
+                <fa-icon class="myicon" type="button" [icon]="faEdit" (click)="navigate(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faTrash" (click)="poistaTiketti(tiketti.id)"></fa-icon>
+                <fa-icon class="myicon" type="button" [icon]="faLeft" (click)="muutaTila(tiketti.id, 'aloitettu')"></fa-icon>
+              </div>
+            </h5>
+          </div>
+          <div id="collapse{{tiketti.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionc">
+            <div class="card-body">
+              {{ tiketti.kuvaus }}
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

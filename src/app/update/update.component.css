@@ -1,0 +1,16 @@
+.mytitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+form {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.form-group {
+    margin-bottom: 2em;
+}

@@ -1,0 +1,22 @@
+<div class="container">
+<div class="mytitlerow">Luo uusi tiketti</div>
+<form [formGroup]="tikettiForm" (ngSubmit)="send()">
+    <div class="form-group">
+      <label for="nimi">Nimi</label>
+      <input type="text" class="form-control" id="nimi" formControlName="nimi">
+    </div>
+    <div class="form-group">
+        <label for="tila">Tila</label>
+        <select id="tila" formControlName="tila">
+            <option *ngFor="let tila of tilat" [ngValue]="tila.nimi">
+               {{tila.label}}
+            </option>
+        </select>
+    </div>
+      <div class="form-group">
+        <label for="kuvaus">Kuvaus</label>
+        <textarea class="form-control" id="kuvaus" rows="3" formControlName="kuvaus" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mybutton">Submit</button>
+</form>
+</div>

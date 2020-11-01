@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body { 
+    background-color: #494949;
+    color: #ffffff;
+    font-family: 'roboto_concensed_regular', 'arial', 'sans-serif';
+}
+.mytitlerow {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 30px;
+    overflow: auto;
+    color:#53c3bb;
+}
+.mytitle {
+    font-size: 20px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: center;
+    color: #53c3bb;
+}
+.mybutton {
+    background-color: #53a9a3;
+    color: #ffffff;
+    border: none;
+}
+.mybutton:hover {
+    background-color: #53c3bb;
+}
+label {
+    color: #53c3bb;
+    font-family: 'roboto_concensed_regular', 'arial', 'sans-serif';
+}

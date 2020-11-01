@@ -1,0 +1,32 @@
+
+#accordiona {
+    margin-top: 3em;
+}
+#accordionb {
+    margin-top: 3em;
+}
+#accordionc {
+    margin-top: 3em;
+}
+.myicon {
+    margin-left: 0.5em;
+    color: #f5f5f5;
+}
+
+.infoicon {
+ margin-left: 1em;
+}
+
+.mybtn {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: left;
+}
+.card {
+    background-color: #53a9a3;
+}
+.card-body {
+    background-color: #ffffff;
+    color:#3a3a3a;
+}
+
